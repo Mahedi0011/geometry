@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-4xl">Geometry</h1>
+    </header>
+    <main>
+        <div class="flex flex-col lg:flex-row">
+            <!-- area---------- -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+                <!-- frist card -->
+                <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="/images/triangle.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <p>Total Area : <span id="triangle-area">0</span> </p>
+                        <p>
+                            <input type="number" class="w-24 border text-xl px-2 bg-gray-300" id="triangle-base"
+                                placeholder="base"><span class="ml-2">cm<sup>2</sup></span>
+                            <input type="number" class="w-24 border text-xl px-2  bg-gray-300" id="triangle-hight"
+                                placeholder="hight"><span class="ml-2">cm<sup>2</sup></span>
+                        </p>
+                        <div class="card-actions">
+                            <button class="w-full btn btn-primary" onclick=calculateTriangleAre()>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- secdent card------------ -->
+                <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="/images/rectangle.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle Area</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <p>Total Area : <span id="rectangle-area">0</span></p>
+                        <p>
+                            <input type="number" class="w-24 border text-xl px-2 bg-gray-300" id="rectangle-base"
+                                placeholder="base"><span class="ml-2">cm<sup>2</sup></span>
+                            <input type="number" class="w-24 border text-xl px-2 bg-gray-300" id="rectangle-hight"
+                                placeholder="hight"><span class="ml-2">cm<sup>2</sup></span>
+                        </p>
+                        <div class="card-actions">
+                            <button class="w-full btn btn-primary" onclick=calculateRectangleAre()>Rectangle</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd card ============= -->
+                <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="/images/ellipse.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <p>Total Area : <span id="ellipse-area"></span> </p>
+                        <p>
+                            <input type="number" class="w-24 border text-xl px-2 bg-gray-300" id="ellipse-hight"
+                             placeholder="base"><span class="ml-4">cm<sup>2</sup></span>
+                            <input type="number" class="w-24 border text-xl px-2 bg-gray-300" id="ellipse-base"
+                                placeholder="base"><span>cm<sup>2</sup></span>
+                        </p>
+
+                        <div class="card-actions">
+                            <button class="w-full btn btn-primary" onclick="ellipseCalculate()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- are calculation -->
+            <div class="w-[400px]">
+                area calculation
+            </div>
+        </div>
+
+    </main>
+    <script src="scripts/area-calculate.js"></script>
+</body>
+
+</html>
